@@ -1,0 +1,5 @@
+@charset "utf-8";
+.container {
+	max-width: 1000px;
+}
+.bg-dark{background-color:#252727}
