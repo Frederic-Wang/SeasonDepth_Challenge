@@ -9,7 +9,7 @@
 
 @color-primary: #FFA500;
 @color-light: white;
-@color-dim: #6c6d6d;
+@color-dim: white;
 @spacing: 50px;
 @radius: 4px;
 
@@ -31,8 +31,14 @@ body {
 p {
   font-weight: 300;
   font-family: @font-text; 
+	
 }
-
+a.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}
 a1 { 
   color: @color-dim;
   text-decoration: none;
@@ -43,6 +49,7 @@ a1 {
   font-weight: 400;
   background: #252727;
 	float:left;
+	
 }
 
 a1:hover { 
@@ -98,7 +105,7 @@ h1 {
    font-family: @font-title;
    letter-spacing: 1.5px;
    font-weight: 400;
-   font-size: 1.4em;
+   font-size: 1.7em;
   }
   
   .event {
@@ -106,6 +113,7 @@ h1 {
     padding-bottom: (@spacing * 0.5);
     margin-bottom: @spacing;  
     position: relative;
+	  
 
     &:last-of-type { 
       padding-bottom: 0;
@@ -121,7 +129,7 @@ h1 {
 
     &:before {
       left: (((@date * 0.6) + @spacing + @line + @dot + (@dotborder * 2)) * 1.5) * -1;    
-      color: fade(@color-light, 40%);    
+      color: @color-primary;
       content: attr(data-date);
       text-align: right;
       font-weight: 100;    

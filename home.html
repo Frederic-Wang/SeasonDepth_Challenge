@@ -37,6 +37,8 @@
 }
     .text-cen {
 }
+    .mb-6 {
+}
     </style>
     <!-- Bootstrap core CSS -->
 
@@ -49,6 +51,7 @@
     <link href="jiaun.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet/less" type="text/css" href="styles.less" />
 	  <link href="carousel.css" rel="stylesheet">
+	  <link href="pricing.css" rel="stylesheet">
 	  <meta http-equiv="Access-Control-Allow-Origin" content="*" />
 	  <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
 </head>
@@ -60,23 +63,23 @@
 
                 <img src="brand_white.svg" class="navbar-brand" width="50">
                 <ul class="nav col-lg-auto me-lg-auto mb-md-0">
-                  <li class="align-content-center">
-                    <a1 href="#" class="nav-link px-2 text-white">Introduction</a1>
+                  <li class="align-content-center nav-item">
+                    <a href="#int" class="nav-link text-white"><a1>Introduction</a1></a>
                   </li>
                   <li>
-                    <a1 href="#" class="nav-link px-2 text-white">Tracks</a1>
+					  <a href="#tra" class="nav-link text-white"><a1>Tracks</a1></a>
                   </li>
                   <li>
-                    <a1 href="#" class="nav-link px-2 text-white">Evaluation</a1>
+					  <a href="#eva" class="nav-link text-white"><a1>Evaluation</a1></a>
                   </li>
                   <li>
-                    <a1 href="#" class="nav-link px-2 text-white">Timeline</a1>
+                    <a href="#tim" class="nav-link text-white"><a1>Timeline</a1></a>
                   </li>
                   <li>
-                    <a1 href="#" class="nav-link px-2 text-white">Awards</a1>
+                    <a href="#awa" class="nav-link text-white"><a1>Award</a1></a>
                   </li>
                   <li>
-                    <a1 href="#" class="nav-link px-2 text-white">Organizers</a1>
+                    <a href="#org" class="nav-link text-white"><a1>Orgnizer</a1></a>
                   </li>
                 </ul>
 <div class="text-end">
@@ -87,19 +90,88 @@
             </div>
           </header>
           <div class="container1">
-            <img src="cover2.png" class="w-100">          </div>
-          <div class="container p-4">
+            <img1><img src="cover3.png" class="img-fluid" alt="img-responsive"></img1>        </div>
+          <div id="int" class="container p-4 anchor">
           <h1 class="text-white">Introduction</h1>
           <p class="text-white-50">
             In the application of outdoor mobile robotics and autonomous driving, it is universally recognized that the long-term robustness and stability of learning-based depth prediction under various environments has been the bottleneck of lifelong trustworthy autonomy <i>(badino2011visual,Sattler2018CVPR)</i>. Although monocular depth prediction has been well studied recently in the research community, however, there is little work on robust depth prediction across different environments, e.g. changing illumination and seasons, which is owing to the lack of a diverse real-world dataset containing various scenarios and the corresponding benchmark.
           </p>
           <p class="text-white-50"> In order to raise attention among the ICRA community to solve the challenging lifelong learning-based depth prediction problem, we plan to organize the SeasonDepth Prediction Challenge based on our new monocular depth prediction dataset, <a href="https://arxiv.org/abs/2011.04408">SeasonDepth</a>, which contains multi-traverse outdoor images from changing environments. It is also the first depth prediction dataset with diverse road scenes to benchmark the depth prediction performance under different environmental conditions. 
             To the best of our knowledge, we are the first to quantitatively evaluate the accuracy and robustness of monocular depth prediction across dramatically changing environments, setting up two tracks for both supervised learning and self-supervised learning-based methods. We believe our competition will contribute to flourish the long-term robust perception research among the ICRA community with our dataset and benchmark.</p>
-          <h1 class="text-white">Tracks</h1>
-          <p></p>
-<h1 class="text-white">Awards</h1>
-<img src="reward.png" class="w-100" alt="Responsive image">
-          <h1 class="text-white">Timeline</h1>
+          <h1 class="text-white" id="tra">Tracks</h1>
+          <p class="text-white-50">In this competition, we propose to host two tracks --- one <i>supervised learning track</i> and one <i>self-supervised learning track</i>.</p>
+          <div class="row row-cols-1 row-cols-md-2 mb-3 text-center align-content-center">
+			  <div class="col">
+        <div class="card rounded-3 shadow-sm">
+          <div class="card-header py-3 bg-warning">
+            <h4 class="my-0 fw-normal text-black">SLT&nbsp;</h4>
+          </div>
+          <div class="card-body bg-black">
+            <h3>Supervised Learning Track</h3>
+			  
+            <ul class="list-unstyled mt-3 mb-4">
+			  <li> The participants can make full use of all depth maps released in the SeasonDepth dataset to train the model</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-warning">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3 bg-warning">
+            <h4 class="my-0 fw-normal text-black">SSLT</h4>
+          </div>
+          <div class="card-body bg-black">
+            <h3>Self-Supervised Learning Track</h3>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Only monocular image sequences are used for model training without the supervision of depth maps</li>
+			  <li>Note: the grading metrics are scaleless for relative depth values, which is compatible to the self-supervised learning-based methods.</li>
+            </ul>
+			  
+            <button type="button" class="w-100 btn btn-lg btn-warning">Get started</button>
+          </div>
+        </div>
+      </div></div>
+			  <h1 class="text-white" id="eva">Evaluation</h1>
+			  <p class="text-white-50">For the training set and validation set of the challenge, RGB images and depth ground truth have been released on <a href="https://seasondepth.github.io/">https://seasondepth.github.io/</a>.
+For the test set, only RGB images will be released, and the corresponding ground truth is retained and used to evaluate the submissions in the challenge. The training and validation set contain 7 multi-environment slices of images, and we leave one slice as the test set for the challenge under 12 different environments. For the purpose of proposal review, the test set for the challenge including RGB images and depth ground truth can be found on <a href="https://drive.google.com/file/d/17Ia-esYfPQ9zmNOvPeOfCZjENuDBph_W/view?usp=sharing">a temporal private cloud storage</a>.
+All participants will be given a training set and a validation set for the training purpose in each competition track, and we set no limits on other third-party public datasets or pretrained models in the competition. Each individual participant will be graded based on 6 metrics in SeasonDepth benchmark of the test set. The evaluation code and instructions can be found on <a href="https://github.com/SeasonDepth/SeasonDepth">https://github.com/SeasonDepth/SeasonDepth</a>.</p>
+<h1 class="text-white" id="awa">Awards</h1>
+<div class="row row-cols-1 row-cols-md-2 mb-3 text-center align-content-center">
+  <div class="col">
+    <div class="card rounded-3 shadow-sm">
+      <div class="card-header py-3 bg-warning">
+        <h4 class="my-0 fw-normal text-black">SLT&nbsp;</h4>
+      </div>
+      <div class="card-body bg-black">
+        <h3>Supervised Learning Track</h3>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>First prize: $1,000</li>
+			<li>Second prize: $500</li>
+			<li>Third prize: $300</li>
+        </ul>
+        <button type="button" class="w-100 btn btn-lg btn-outline-warning">Get started</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="card-header py-3 bg-warning">
+        <h4 class="my-0 fw-normal text-black">SSLT</h4>
+      </div>
+      <div class="card-body bg-black">
+        <h3>Self-Supervised Learning Track</h3>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>First prize: $1,000</li>
+			<li>Second prize: $500</li>
+			<li>Third prize: $300</li>
+        </ul>
+        <button type="button" class="w-100 btn btn-lg btn-warning">Get started</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h1 class="text-white" id="tim">Timeline</h1>
           <div id="timeline-content">
 <ul class="timeline">
   <li class="event" data-date="Now">
@@ -122,72 +194,70 @@
       <p>Get up to $1,000 !</p></li>
 </ul>
 </div>
-          <h1 class="text-white">Organizers</h1>
-          <div class="container marketing">
+          <h1 class="text-white" id="org">Organizers</h1>
+          <div class="container text-center p-3">
             <!-- Three columns of text below the carousel -->
             <div class="row">
-              <div class="col-lg-6"> <img src="IMG_5851.JPG" class="rounded-circle mx-auto d-block" width="140">
-                <h2 class="text-center">Ding Zhao</h2>
-                <p class="text-center">Zhao is currently an Assistant Professor at Department of Mechanical Engineering, Carnegie Mellon University.</p>
-                <p class="text-center"><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-              </div>
+              <div class="col-lg-3"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
+                <h2>Hanjiang Hu</h2>
+                <p>Ph.D. @ Carnegie Mellon University</p>
+</div>
               <!-- /.col-lg-4 -->
-              <div class="col-lg-6"> <img src="IMG_5851.JPG" class="rounded-circle d-block mx-auto" width="140">
-                <h2 class="text-center">Heshang Wang</h2>
-                <p class="text-cen text-center">Wang is currently a Professor with the Department of Automation, Shanghai Jiao Tong University, Shanghai, China.</p>
-                <p class="text-center"><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                  </div>
+              <div class="col-lg-3"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
+                <h2>Jiacheng Zhu</h2>
+                <p>Ph.D. @ Carnegie Mellon University</p>
+</div>
               <!-- /.col-lg-4 -->
+              <div class="col-lg-3"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
+                <h2>Zuxin Liu</h2>
+                <p>Ph.D. @ Carnegie Mellon University</p>
+</div>
+              <div class="col-lg-3"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
+                <h2>Wenhao Ding</h2>
+                <p>Ph.D. @ Carnegie Mellon University</p>
+</div>
               <!-- /.col-lg-4 -->
             </div>
             <!-- /.row -->
           </div>
-          <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img src="IMG_5851.JPG" class="rounded-circle" width="140">
-        <h2>Hanjiang Hu</h2>
-        <p>Hanjiang Hu is currently the Ph.D. student in Safe AI Lab at Carnegie Mellon University.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="IMG_5851.JPG" class="rounded-circle" width="140">
-
-        <h2>Jiacheng Zhu</h2>
-        <p>Jiacheng Zhu is currently the Ph.D. student in Safe AI Lab at Carnegie Mellon University.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="IMG_5851.JPG" class="rounded-circle" width="140">
-
-        <h2>Zuxin Liu</h2>
-        <p>Zuxin Liu is currently the Ph.D. student in Safe AI Lab at Carnegie Mellon University.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-      </div>
-          <div class="container marketing">
+          <div class="container text-center p-3">
             <!-- Three columns of text below the carousel -->
             <div class="row">
-              <div class="col-lg-4"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
-                <h2>Wenhao Ding</h2>
-                <p>Wenhao Ding is currently the Ph.D. student in Safe AI Lab at Carnegie Mellon University.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-              </div>
+              <div class="col-lg-3"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
+                <h2>Zhijian Qiao</h2>
+                <p>Masters @ Shanghai Jiao Tong University</p>
+</div>
               <!-- /.col-lg-4 -->
-              <div class="col-lg-4"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
+              <div class="col-lg-3"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
+                <h2>Baoquan Yang</h2>
+                <p>Masters @ Shanghai Jiao Tong University</p>
+</div>
+              <!-- /.col-lg-4 -->
+              <div class="col-lg-3"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
                 <h2>Shuai Wang</h2>
-                <p>Jiacheng Zhu is currently the Ph.D. student in Safe AI Lab at Carnegie Mellon University.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-              </div>
-              <!-- /.col-lg-4 -->
-              <div class="col-lg-4"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
+                <p>Masters @ Carnegie Mellon University</p>
+</div>
+              <div class="col-lg-3"> <img src="IMG_5851.JPG" class="rounded-circle" width="140">
                 <h2>Jiarun Wei</h2>
-                <p>Zuxin Liu is currently the Ph.D. student in Safe AI Lab at Carnegie Mellon University.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-              </div>
+                <p>Masters @ Carnegie Mellon University</p>
+</div>
+              <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <div class="container marketing p-3">
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+              <div class="col-lg-6"> <img src="IMG_5851.JPG" class="rounded-circle mx-auto d-block" width="140">
+                <h2 class="text-center">Ding Zhao</h2>
+                <p class="text-center">Assistant Professor @ Carnegie Mellon University</p>
+</div>
+              <!-- /.col-lg-4 -->
+              <div class="col-lg-6"> <img src="IMG_5851.JPG" class="rounded-circle d-block mx-auto" width="140">
+                <h2 class="text-center">Heshang Wang</h2>
+                <p class="text-cen text-center">Professor @&nbsp; Shanghai Jiao Tong University</p>
+</div>
+              <!-- /.col-lg-4 -->
               <!-- /.col-lg-4 -->
             </div>
             <!-- /.row -->

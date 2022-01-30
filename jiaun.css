@@ -1,5 +1,17 @@
 @charset "utf-8";
 .container {
-	max-width: 1000px;
+	max-width: 1100px;
 }
 .bg-dark{background-color:#252727}
+.bg-warning{
+	background-color:#FFC107;
+}
+p{
+	font-size: 20px;
+}
+
+img1 {
+	padding-top: 25px;
+}
+
+	
