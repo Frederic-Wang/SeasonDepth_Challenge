@@ -312,7 +312,7 @@
                     <p>Ph.D. @ CMU</p>
                 </div>
 
-                <div class="col-lg"> <img src="${APP_PATH}/static/people-image/linyi.png" class="rounded-circle" width="140">
+                <div class="col-lg-3"> <img src="${APP_PATH}/static/people-image/linyi.png" class="rounded-circle" width="140">
                     <h2>Linyi Li</h2>
                     <p>Ph.D. @ UIUC</p>
                 </div>
@@ -353,7 +353,7 @@
                     <p class="text-center">Assistant Professor @ CMU</p>
                 </div>
 
-                <div class="col-lg"> <img src="${APP_PATH}/static/people-image/bo.png" class="rounded-circle d-block mx-auto" width="140">
+                <div class="col-lg-6"> <img src="${APP_PATH}/static/people-image/bo.png" class="rounded-circle d-block mx-auto" width="140">
                     <h2 class="text-center">Bo Li</h2>
                     <p class="text-cen text-center">Assistant Professor @&nbsp; UIUC</p>
                 </div>
